@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script defer src="form.js"></script>
+    <title>Registration</title>
+</head>
+
+<body>
+    <!-- Dashboard Logo -->
+    <nav>
+        <div class="logo">
+            <h1>Telkom Indonesia</h1>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a>Registration</a></li>
+        </ul>
+    </nav>
+    <!-- Dashboard End -->
+
+    <!-- Hero End -->
+    <!-- Headline -->
+    <div>
+        <h1 style="margin-top: 50px">FORM REGISTRASI KERJA</h1>
+        <div class="container" style="margin-left: 200px; margin-right: 200px">
+            <div>
+                <p style="font-size: 20px; text-align: center">
+                    <strong> Selamat Datang Wahai Orang Yang Terpilih </strong>
+                </p>
+                <div>
+                    <!-- Coding Inputan Untuk Formulir -->
+                    <form action="">
+                        <p></p>
+                        Nama <input type="text" id="nama" placeholder="Nama Anda" />
+                        Email <input type="text" id="email" placeholder="Email Anda" />
+                        No Handphone
+                        <input type="text" id="nohandphone" placeholder="Nomor Anda" />
+                        Jenis Kelamin
+                        <select id="jeniskelamin" style="height: 49.24px;">
+                            <option value="Laki-laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                        Asal Universitas
+                        <input type="text" id="asaluni" placeholder="Asal Universitas Anda" />
+                        Gelar
+                        <select id="gelar" style="height: 49.24px;">
+                            <option value="S1">S1</option>
+                            <option value="S2">S2</option>
+                            <option value="S3">S3</option>
+                        </select>
+                        Pilihan Bidang
+                        <select id="bidang" style="height: 49.24px;">
+                            <option value="Front end">Front End</option>
+                            <option value="Backend">Backend</option>
+                            <option value="Software Architect">Software Architect</option>
+                            <option value="Quality Assurance">Quality Assurance</option>
+                            <option value="Document Engineer">Document Engineer</option>
+                            <option value="Android Developer">Android Developer</option>
+                            <option value="iOS Developer">iOS Developer</option>
+                        </select>
+                        Rentang waktu pengalaman bekerja
+                        <input type="text" id="berapalama" placeholder="Tahun" />
+                        <p><label for="file">Upload CV :</label></p>
+                        <p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"
+                                ></p>
+                    </form>
+
+                    <!-- Untuk membuat modal tidak transparant -->
+                    <button data-modal-target="#modal" onclick="myFunction()" class="button-kirim">Kirim</button>
+                    <!-- Untuk Menunjukkan Hasil dari formulir yang sudah diisi -->
+                    <div class="modal" id="modal">
+                        <div class="modal-header">
+                            <div class="title">Hasil Formulir</div>
+                            <button data-close-button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p id="result-nama"></p>
+                            <p id="result-email"></p>
+                            <p id="result-nohandphone"></p>
+                            <p id="result-jeniskelamin"></p>
+                            <p id="result-asaluni"></p>
+                            <p id="result-gelar"></p>
+                            <p id="result-bidang"></p>
+                            <p id="result-berapalama"></p>
+                            CV : <img id="output" width="400" />
+                        </div>
+                    </div>
+                    <!-- Untuk membuat modal transparant -->
+                    <div id="overlay"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer style="text-align: center"> &copy;Copyright TEFA SMK Telkom Malang Kelompok 10 @2022.
+</footer>
+</html>
